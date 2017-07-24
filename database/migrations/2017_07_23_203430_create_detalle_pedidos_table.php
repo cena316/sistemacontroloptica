@@ -16,6 +16,7 @@ class CreateDetallePedidosTable extends Migration
         Schema::create('detalle_pedidos', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('pedido_id', false, true);
+            $table->integer('articulo_id', false, true);
             $table->integer('cantidad', false, true);
             $table->integer('valor', false, true);
             $table->timestamps();
